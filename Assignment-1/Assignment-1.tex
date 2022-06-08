@@ -193,7 +193,38 @@
     \]
 \end{prob}
 \begin{pf}
-    
+    该过程为负单轴晶体的 I 类相位匹配, 匹配条件为
+    \begin{align}
+        n_o^{\omega}=n_e^{2\omega}(\theta_m).
+    \end{align}
+    相位失配为
+    \begin{align}
+        \Delta k=2\frac{n_o^{\omega}\omega}{c}-\frac{n_e^{2\omega}(\theta)2\omega}{c}=-\frac{2\omega}{c}\frac{\partial n_e^{2\omega}(\theta)}{\partial\theta}(\theta-\theta_m),
+    \end{align}
+    其中
+    \begin{gather}
+        \frac{[n_e^{2\omega}(\theta)]^2\cos^2\theta}{[n_o^{2\omega}]^2}+\frac{[n_e^{2\omega}(\theta)]^2\sin^2\theta}{[n_e^{2\omega}]^2}=1,\\
+        \Longrightarrow n_e^{2\omega}(\theta)=\frac{n_o^{2\omega}n_e^{2\omega}}{\sqrt{[n_e^{2\omega}]^2\cos^2\theta+[n_o^{2\omega}]^2\sin^2\theta}},
+    \end{gather}
+    \begin{align}
+        \notag\Longrightarrow\frac{\partial n_e^{2\omega}}{\partial\theta}=&-\frac{1}{2}n_o^{2\omega}n_e^{2\omega}\{[n_e^{2\omega}\cos\theta]^2+[n_o^{2\omega}\sin\theta]^2\}^{-3/2}\{[n_o^{2\omega}]^2-[n_e^{2\omega}]^2\}\sin 2\theta\\
+        \notag=&-\frac{1}{2}[n_o^{2\omega}]^{-2}[n_e^{2\omega}]^{-2}\left\{\frac{\cos^2\theta}{[n_o^{2\omega}]^2}+\frac{\sin^2\theta}{[n_e^{2\omega}]^2}\right\}^{-3/2}\{[n_o^{2\omega}]^2-[n_e^{2\omega}]^2\}\sin 2\theta\\
+        \notag=&-\frac{1}{2}[n_o^{2\omega}]^{-2}[n_e^{2\omega}]^{-2}[n_e^{2\omega}(\theta)]^{-3/2}\{[n_o^{2\omega}]^2-[n_e^{2\omega}]^2\}\sin 2\theta,
+    \end{align}
+    由于 $n_o^{\omega}=n_e^{2\omega}(\theta_m)$, 故
+    \begin{align}
+        \notag\frac{\partial n_e^{2\omega}(\theta_m)}{\partial\theta}=&-\frac{1}{2}[n_o^{2\omega}]^{-2}[n_e^{2\omega}]^{-2}[n_e^{2\omega}(\theta_m)]^{-3/2}\{[n_o^{2\omega}]^2-[n_e^{2\omega}]^2\}\sin 2\theta_m\\
+        \notag=&-\frac{1}{2}[n_o^{2\omega}]^{-2}[n_e^{2\omega}]^{-2}[n_o^{\omega}]^{-3}\{[n_o^{2\omega}]^2-[n_e^{2\omega}]^2\}\sin 2\theta_m\\
+        \notag=&-\frac{1}{2}\frac{[n_e^{2\omega}]^2-[n_o^{2\omega}]^2}{[n_o^{\omega}]^3}\sin 2\theta_m.
+    \end{align}
+    将上式代回相位适配表达式中得
+    \begin{align}
+        \Delta k=\frac{2\omega}{c}\frac{[n_e^{2\omega}]^{-2}-[n_o^{2\omega}]^{-2}}{2[n_o^{\omega}]^3}\sin(2\theta_m)(\theta-\theta_m),
+    \end{align}
+    故
+    \begin{align}
+        \Delta k(\theta)L|_{\theta=\theta_m}=\frac{2\omega L}{c}\sin(2\theta_m)\frac{(n_e^{2\omega})^{-2}-(n_o^{2\omega})^{-2}}{2(2n_o^{2\omega})^{-3}}(\theta-\theta_m).
+    \end{align}
 \end{pf}
 
 \begin{prob}
