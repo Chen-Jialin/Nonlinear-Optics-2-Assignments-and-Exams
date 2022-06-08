@@ -231,7 +231,26 @@
     参量振荡器可以看作是一种新型的激光器, 利用它可以实现频率的调谐输出, 请以负单轴 II 类晶体为例, 分析角度调谐输出.
 \end{prob}
 \begin{sol}
-    
+    负单轴晶体的 II 类相位匹配中, $o+e\rightarrow e$, 相位匹配条件为
+    \begin{gather}
+        k_3=k_1+k_2,\\
+        \Longrightarrow n_e^{\omega_3}(\theta_m)\omega_3=n_o^{\omega_1}\omega_1+n_e^{\omega_2}(\theta)\omega_2,
+    \end{gather}
+    若将晶体旋转至 $\theta_m+\Delta\theta$, 则输出频率变为 $\omega_1+\Delta\omega$ 和 $\omega_2+\Delta\omega$, 上式变为
+    \begin{align}
+        \notag&\omega_3\left[n_e^{\omega_3}(\theta_m)+\frac{\partial n_e^{\omega_3}(\theta_m)}{\partial\theta}\Delta\theta\right]\\
+        =&\left(n_o^{\omega_1}+\frac{\partial n_o^{\omega_1}}{\partial\omega}\Delta\omega\right)(\omega_1+\Delta\omega)+\left[n_e^{\omega_2}(\theta_m)+\frac{\partial n_e^{\omega_2}(\theta)}{\partial\theta}\Delta\theta-\frac{\partial n_e^{\omega_2}(\theta_m)}{\partial\omega}\Delta\omega\right](\omega_2+\Delta\omega_2).
+    \end{align}
+    以上两式相减并略去二阶小量得
+    \begin{gather}
+        \omega_3\frac{\partial n_e^{\omega_3}(\theta_m)}{\partial\theta}\Delta\theta=n_o^{\omega_1}\Delta\omega+\omega_1\frac{\partial n_o^{\omega_1}}{\partial\omega}\Delta\omega+n_e^{\omega_2}(\theta_m)\Delta\omega+\omega_2\frac{\partial n_e^{\omega_2}(\theta_m)}{\partial\theta}\Delta\theta-\omega_2\frac{\partial n_e^{\omega_2}(\theta_m)}{\partial\omega}\Delta\omega\\
+        \Longrightarrow\frac{\Delta\omega}{\Delta\theta}=\frac{\omega_3\frac{\partial n_e^{\omega_3}(\theta_m)}{\partial\theta}-\omega_2\frac{\partial\theta_e^{\omega_2}(\theta_m)}{\partial\theta}}{n_o^{\omega_1}+n_e^{\omega_2}(\theta)+\omega_1\frac{\partial n_o^{\omega_1}}{\partial\omega}-\omega_2\frac{\partial n_e^{\omega_2}(\theta_m)}{\partial\omega}},
+    \end{gather}
+    其中
+    \begin{gather}
+        \frac{n_e^{\omega}(\theta_m)\cos^2\theta_m}{n_o^2(\omega)}+\frac{n_e^{\omega}(\theta_m)\sin^2\theta_m}{n_e^2(\omega)}=1,\\
+        \Longrightarrow n_e^{\omega}(\theta_m)=\frac{n_o(\omega)n_e(\omega)}{\sqrt{n_e^2(\omega)\cos^2\theta_m+n_o^2(\omega)\sin^2\theta_m}}.
+    \end{gather}
 \end{sol}
 
 \begin{prob}
