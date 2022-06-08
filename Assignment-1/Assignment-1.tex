@@ -257,14 +257,79 @@
     请以负单轴晶体为例, 按以下条件分别推导 I 型和 II 型二次谐波的匹配带宽:
     \begin{itemize}
         \item[1)] 简并共线;
-        \item[2)] 简并非贡献,
+        \item[2)] 简并非共线,
     \end{itemize}
     并比较 I 型和 II 型的带宽特点.
 \end{prob}
 \begin{pf}
-    \begin{itemize}
-        \item[1)] 
-        \item[2)] 
-    \end{itemize}
+    对 I 型相位匹配下的二次谐波, $o+o\rightarrow e$. 简并共线情况下, 相位匹配条件为
+    \begin{align}
+        \Delta k=2k_o(\omega_0)-k_e(2\omega_0)=2\frac{n_o^{\omega_0}\omega_0}{c}-\frac{n_e^{2\omega_0}(\theta)2\omega_0}{c}=\frac{2\omega_0}{c}[n_o^{\omega_0}-n_e^{2\omega_0}(\theta_m)]=0.
+    \end{align}
+    当基频变化 $\Delta\omega$ 时, 相位失配为
+    \begin{align}
+        \Delta k=\frac{2\omega_0}{c}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega}\Delta\omega-\frac{\partial n_e^{2\omega_0}(\theta_m)}{\partial\omega}2\Delta\omega\right].
+    \end{align}
+    令
+    \begin{align}
+        \frac{\Delta kL}{2}=\frac{\pi}{2},
+    \end{align}
+    得带宽为
+    \begin{align}
+        \Delta\omega=\frac{2\pi c}{\omega_0L}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega_0}-2\frac{\partial n_e^{2\omega_0}(\theta_m)}{\partial\omega}\right]^{-1}.
+    \end{align}
+
+    非简并共线情况下, 设 $\bm{k}_{o,1}(\omega_0)$ 与 $\bm{k}_{o,2}(\omega_0)$ 与 $\bm{k}_e(2\omega_0)$ 夹角分别为 $\theta_1$ 和 $\theta_2$, 沿着 $\bm{k}_e(2\omega_0)$ 方向相位匹配条件为
+    \begin{align}
+        \notag\Delta k=&k_{o,1}(\omega_0)\cos\theta_1+k_{o,2}(\omega_0)\cos\theta_2-k_e(2\omega_0)=\frac{n_o^{\omega_0}\omega_0}{c}\cos\theta_1+\frac{n_o^{\omega_0}\omega_0}{c}\cos\theta_2-\frac{n_e^{2\omega_0}2\omega_0}{c}\\
+        =&\frac{\omega_0}{c}[n_o^{\omega_0}(\cos\theta_1+\cos\theta_2)-2n_e^{2\omega_0}]=0.
+    \end{align}
+    当基频变化 $\Delta\omega$ 时, 相位失配为
+    \begin{align}
+        \Delta k=\frac{\omega_0}{c}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega}\Delta\omega(\cos\theta_1+\cos\theta_2)-2\frac{\partial n_e^{2\omega_0}}{\partial\omega}2\Delta\omega\right].
+    \end{align} 
+    令
+    \begin{align}
+        \frac{\Delta kL}{2}=\frac{\pi}{2},
+    \end{align}
+    得带宽为
+    \begin{align}
+        \Delta\omega=\frac{\pi c}{\omega_0L}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega}(\cos\theta_1+\cos\theta_2)-4\frac{\partial n_e^{2\omega_0}}{\partial\omega}\right]^{-1}.
+    \end{align}
+
+    对 II 型相位匹配下的二次谐波, $o+e\rightarrow e$. 简并共线情况下, 相位匹配条件为
+    \begin{align}
+        \Delta k=k_o(\omega_0)+k_e(\omega_0)-k_e(2\omega_0)=\frac{n_o^{\omega_0}\omega_0}{c}+\frac{n_e^{\omega_0}(\theta_m)\omega_0}{c}-\frac{n_e^{\omega_0}(\theta_m)2\omega}{c}=\frac{\omega_0}{c}[n_o^{\omega_0}+n_e^{\omega_0}(\theta_m)-2n_e^{2\omega_0}(\theta_m)]=0.
+    \end{align}
+    当基频变化 $\Delta\omega$ 时, 相位失配为
+    \begin{align}
+        \Delta k=\frac{\omega_0}{c}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega}\Delta\omega+\frac{\partial n_e^{\omega_0}(\theta_m)}{\partial\omega}\Delta\omega-2\frac{\partial n_e^{2\omega_0}(\theta_m)}{\partial\omega}2\Delta\omega\right].
+    \end{align}
+    令
+    \begin{align}
+        \frac{\Delta kL}{2}=\frac{\pi}{2},
+    \end{align}
+    得带宽为
+    \begin{align}
+        \Delta\omega=\frac{\pi c}{\omega_0L}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega}+\frac{\partial n_e^{\omega_0}(\theta_m)}{\partial\omega}-4\frac{\partial n_e^{2\omega_0}(\theta_m)}{\partial\omega}\right]^{-1}.
+    \end{align}
+
+    非简并共线情况下, 设 $\bm{k}_o(\omega_0)$, $\bm{k}_e(\omega_0)$ 与 $\bm{k}_e(2\omega_0)$ 夹角分别为 $\theta_1$ 和 $\theta_2$, 沿着 $\bm{k}_e(2\omega_0)$ 方向相位匹配条件为
+    \begin{align}
+        \notag\Delta k=&k_o(\omega_0)\cos\theta_1+k_e(\omega_0)\cos\theta_2-k_e(2\omega_0)=\frac{n_o^{\omega_0}\omega_0}{c}\cos\theta_1+\frac{n_e^{\omega_0}\omega_0}{c}\cos\theta_2-\frac{n_e^{2\omega_0}2\omega_0}{c}\\
+        =&\frac{\omega_0}{c}[n_o^{\omega_0}\cos\theta_1+n_e^{\omega_0}\cos\theta_2-2n_e^{2\omega_0}]=0.
+    \end{align}
+    当基频变化 $\Delta\omega$ 时, 相位失配为
+    \begin{align}
+        \Delta k=\frac{\omega_0}{c}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega}\Delta\omega\cos\theta_1+\frac{\partial n_e^{\omega_0}}{\partial\omega}\Delta\omega\cos\theta_2-2\frac{\partial n_e^{2\omega_0}}{\partial\omega}\Delta\omega\right].
+    \end{align}
+    令
+    \begin{align}
+        \frac{\Delta kL}{2}=\frac{\pi}{2},
+    \end{align}
+    得带宽为
+    \begin{align}
+        \Delta\omega=\frac{\pi c}{\omega_0L}\left[\frac{\partial n_o^{\omega_0}}{\partial\omega}\cos\theta_1+\frac{\partial n_e^{\omega_0}}{\partial\omega}\cos\theta_2-4\frac{\partial n_e^{2\omega_0}}{\partial\omega}\right]^{-1}.
+    \end{align}
 \end{pf}
 \end{document}
