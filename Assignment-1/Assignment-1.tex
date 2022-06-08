@@ -127,10 +127,10 @@
             \end{bmatrix},\\
             \bm{a}^o\bm{a}^e=&\begin{bmatrix}
                 -\cos\theta\sin\varphi\cos\varphi\\
-                -\cos\theta\sin\varphi\cos\varphi\\
+                \cos\theta\sin\varphi\cos\varphi\\
                 0\\
-                -2\sin\theta\cos\varphi\\
-                2\sin\theta\sin\varphi\\
+                -\sin\theta\cos\varphi\\
+                \sin\theta\sin\varphi\\
                 \cos\theta\cos 2\varphi
             \end{bmatrix}.
         \end{align}
@@ -149,20 +149,20 @@
                 d_{31}&d_{31}&d_{33}&0&0&0
             \end{bmatrix}\begin{bmatrix}
                 -\cos\theta\sin\varphi\cos\varphi\\
-                -\cos\theta\sin\varphi\cos\varphi\\
+                \cos\theta\sin\varphi\cos\varphi\\
                 0\\
-                -2\sin\theta\cos\varphi\\
-                2\sin\theta\sin\varphi\\
+                -\sin\theta\cos\varphi\\
+                \sin\theta\sin\varphi\\
                 \cos\theta\cos 2\varphi
             \end{bmatrix}\\
             \notag=&\begin{bmatrix}
                 -\cos\theta\cos\varphi&-\cos\theta\sin\varphi&\sin\theta
             \end{bmatrix}\begin{bmatrix}
-                2d_{15}\sin\theta\sin\varphi-d_{22}\cos\theta\cos 2\varphi\\
-                -2d_{15}\sin\theta\cos\varphi\\
-                -2d_{13}\cos\theta\sin\varphi\cos\varphi
+                d_{15}\sin\theta\sin\varphi-d_{22}\cos\theta\cos 2\varphi\\
+                2d_{22}\sin\theta\sin\varphi\cos\varphi-d_{15}\sin\theta\cos\varphi\\
+                0
             \end{bmatrix}\\
-            =&d_{22}\cos^2\theta\cos\varphi\cos 2\varphi-2d_{13}\cos\theta\sin\theta\sin\varphi\cos\varphi.
+            =&d_{22}\cos^2\theta\cos^2\cos\phi(\cos 2\varphi-2\sin^2\phi)=d_{22}\cos^2\theta\cos^2\cos\phi(1-4\sin^2\phi).
         \end{align}
         \item[2)] 如图 \ref{A1-3}.
         \begin{figure}[H]
@@ -171,7 +171,11 @@
             \caption{II 型相位匹配示意图.}
             \label{A1-3}
         \end{figure}
-        \item[3)] 为得到最佳倍频输出, 取 $\theta_m$ 满足 $\frac{1}{2}[n_e^{\omega}(\theta)+n_o^{\omega}]=n_e^{2\omega}(\theta)$, 在此基础上取 $\varphi$ 使 $d_{eff}$ 极大.
+        \item[3)] 为得到最佳倍频输出, 取 $\theta_m$ 满足 $\frac{1}{2}[n_e^{\omega}(\theta)+n_o^{\omega}]=n_e^{2\omega}(\theta)$, 在此基础上取 $\varphi$ 使 $\abs{d_{eff}}$ 极大.
+        \begin{gather}
+            \frac{\partial d_{eff}}{\partial\varphi}\propto-\sin\varphi(1-4\sin^2\varphi)-8\cos^2\varphi\sin\varphi=-3\sin\varphi(1-4\sin^2\varphi)=0,\\
+            \Longrightarrow\varphi=0,\pm\frac{\pi}{3},\pm\frac{2\pi}{3}.
+        \end{gather}
     \end{itemize}
 \end{sol}
 
