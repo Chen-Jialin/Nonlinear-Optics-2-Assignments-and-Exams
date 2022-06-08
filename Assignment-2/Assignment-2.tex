@@ -79,14 +79,33 @@
     其中, $T=t-\beta_1z$. 证明: $\bar{A}=\sqrt{P_0}\exp(i\gamma P_0z)$ 是上述方程满足初始条件 $\bar{A}_0=\sqrt{P_0}$ 的解.
 \end{prob}
 \begin{pf}
-    
+    先证明该函数满足初始条件: 当 $z=0$ 时, $\bar{A}=\sqrt{P_0}=A_0$.
+
+    再证明该函数为传输方程的解: 将该函数代入传输方程得
+    \begin{align}
+        \text{方程左侧}=i\gamma P_0\sqrt{P_0}e^{i\gamma P_0}=\text{方程右侧}.
+    \end{align}
+
+    故 $\bar{A}=\sqrt{P_0}\exp(i\gamma P_0z)$ 是上述方程满足初始条件 $\bar{A}_0=\sqrt{P_0}$ 的解.
 \end{pf}
 
 \begin{prob}
     目前光通信为什么采用以下三个波长: $\lambda_1=0.85\,\mu$m, $\lambda_2=1.31\,\mu$m, $\lambda_3=1.55\,\mu$m? 光纤通信为什么向长波场, 单模光纤方向发展?
 \end{prob}
 \begin{sol}
-    
+    这三个波长在石英光纤中损耗、色散较小, 适合长距离高速通信.
+
+    \begin{itemize}
+        \item[(1)] 早期由于光源和探测器响应波长的限制, 将损耗较小的 $\lambda_1=0.85\,\mu$m 作为工作波长.
+        \item[(2)] $\lambda_2=1.31\,\mu$m 为石英光纤的零色散点, 且损耗较小.
+        \item[(3)] $\lambda_3=1.55\,\mu$m 为石英光纤损耗的极小点.
+    \end{itemize}
+
+    长波场、单模光纤有较好的传输特性:
+    \begin{itemize}
+        \item[(1)] 损耗: 波长越长, 光纤损耗越小, 适合信号长距离传输.
+        \item[(2)] 色散: 单模光纤无多模色散, 适合长距离、高速的信号传输.
+    \end{itemize}
 \end{sol}
 
 \begin{prob}
