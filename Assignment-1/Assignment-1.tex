@@ -6,7 +6,17 @@
     利用 KDP 晶体进行参量放大, 若其中有两个光波是 e 光, 第三个光波是 o 光, 试推导相位匹配角公式, 其中信号、空闲和泵浦光中哪一个为寻常光? 令 $\omega_3=$\SI{10000}{cm^{-1}}, $\omega_1=\omega_2=$\SI{5000}{cm^{-1}} 能否实现这种形式的相位匹配?
 \end{prob}
 \begin{sol}
-    
+    KDP 为负单轴的晶体, 故为 II 类相位匹配 ($e+o\rightarrow e$).
+
+    要实现相位匹配, 需满足
+    \begin{align}
+        \frac{1}{2}[n_e^{\omega}(\theta)+n_o^{\omega}]=n_e^{2\omega}(\theta_m),
+    \end{align}
+    其中传播方向与光轴夹角为 $\theta$ 的非常光的折射率满足
+    \begin{align}
+        \frac{1}{[n_e^{\omega\text{ 或 }2\omega}(\theta)]^2}=\frac{\cos^2\theta}{n_o^2}+\frac{\sin^2\theta}{[n_e^{\omega\text{ 或 }2\omega}(\theta)]^2}.
+    \end{align}
+    由于 $n_o^{\omega}=1.4596$, $n_e^{\omega}=1.4606$, $n_e^{2\omega}=1.4999$, $\frac{1}{2}[n_e^{\omega}(\pi/2)+n_o^{\omega}]<n_e^{2\omega}(\pi/2)$, 故无角度满足相位匹配条件, 无法实现相位匹配.
 \end{sol}
 
 \begin{prob}
