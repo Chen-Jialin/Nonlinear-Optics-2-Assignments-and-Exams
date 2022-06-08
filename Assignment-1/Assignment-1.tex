@@ -22,11 +22,77 @@
 \begin{prob}
     试证明外加直流电场 $E_x=E_{0j}$ 的 KDP 晶体, 光波在 $zox$ 面内、与 $x$ 轴成 $45^{\circ}$ 方向传播时的电光延迟为下式. 其中 $l$ 为沿光传播方向上的晶体长度, $d$ 为沿外加电场的晶体厚度, $U_y$ 为外加电压.
     \[
-        \Delta\varphi\approx\frac{2\pi l}{\lambda}\left[\frac{\sqrt{2}n_on_e}{\sqrt{n_o^2+n_e^2}}-n_o+\sqrt{2}\left[\frac{1}{n_o^2}+\frac{1}{n_e^2}\right]^{-2/3}\gamma_{41}U_y\frac{l}{d}\right].
+        \Delta\varphi\approx\frac{2\pi l}{\lambda}\left[\frac{\sqrt{2}n_on_e}{\sqrt{n_o^2+n_e^2}}-n_o+\sqrt{2}\left[\frac{1}{n_o^2}+\frac{1}{n_e^2}\right]^{-3/2}\gamma_{41}U_y\frac{l}{d}\right].
     \]
 \end{prob}
 \begin{pf}
-
+    KDP 为负单轴晶体, 故无外加电场下, KDP 折射率椭球方程为
+    \begin{align}
+        \frac{x^2}{n_o^2}+\frac{y^2}{n_o^2}+\frac{z^2}{n_e^2}=1,
+    \end{align}
+    光波在 $zox$ 面内、与 $x$ 轴成 $45^{\circ}$ 方向传播时, 垂直于 $zox$ 面的偏振分量感受到的折射率为 $n_{\perp}=n_o$, 平行于 $zox$ 面的折射率分量感受到的折射率满足
+    \begin{gather}
+        \frac{n_{\parallel}^2\sin^2(-45^{\circ})}{n_o^2}+\frac{n_{\parallel}^2\cos^2(-45^{\circ})}{n_e^2}=1,\\
+        \Longrightarrow n_{\parallel}=\frac{\sqrt{2}n_on_e}{\sqrt{n_o^2+n_e^2}}.
+    \end{gather}
+    KDP 的电光系数为
+    \begin{align}
+        [\gamma_{ij}]=\begin{bmatrix}
+            0&0&0\\
+            0&0&0\\
+            0&0&0\\
+            \gamma_{41}&0&0\\
+            0&\gamma_{41}&0\\
+            0&0&\gamma_{63}
+        \end{bmatrix},
+    \end{align}
+    故外加电场 $E_x=E_{0j}=\frac{U_y}{d}$ 下, KDP 折射率椭球系数变化量为
+    \begin{align}
+        \begin{bmatrix}
+            \Delta\left(\frac{1}{n^2}\right)_1\\
+            \Delta\left(\frac{1}{n_2}\right)_2\\
+            \Delta\left(\frac{1}{n_2}\right)_3\\
+            \Delta\left(\frac{1}{n_2}\right)_4\\
+            \Delta\left(\frac{1}{n_2}\right)_5\\
+            \Delta\left(\frac{1}{n_2}\right)_6
+        \end{bmatrix}=\begin{bmatrix}
+            0&0&0\\
+            0&0&0\\
+            0&0&0\\
+            r_{41}&0&0\\
+            0&r_{41}&0\\
+            0&0&r_{63}
+        \end{bmatrix}\begin{bmatrix}
+            E_{0j}\\
+            0\\
+            0
+        \end{bmatrix}=\begin{bmatrix}
+            0\\
+            0\\
+            0\\
+            0\\
+            \gamma_{41}E_{0j}\\
+            0
+        \end{bmatrix},
+    \end{align}
+    折射率椭球方程为
+    \begin{align}
+        \frac{x^2}{n_o^2}+\frac{y^2}{n_o^2}+\frac{z^2}{n_e^2}+2\gamma_{41}E_{0j}xz=1,
+    \end{align}
+    光波在 $zox$ 面内、与 $x$ 轴成 $45^{\circ}$ 方向传播时, 垂直于 $zox$ 面的偏振分量感受到的折射率满足
+    \begin{align}
+        \frac{[n_{\perp}']^2}{n_o^2}=1,\\
+        \Longrightarrow n_{\perp}'=n_o,
+    \end{align}
+    平行于 $zox$ 面的偏振分量感受到的折射率满足
+    \begin{gather}
+        \frac{[n_{\parallel}']^2\sin^2(-45^{\circ})}{n_o^2}+\frac{[n_{\parallel}']^2\cos^2(-45^{\circ})}{n_e^2}+2\gamma_{41}E_{0j}n_{\parallel}'\sin(-45^{\circ})n_{\parallel}'\cos(-45^{\circ})=1,\\
+        \Longrightarrow n_{\parallel}'=\frac{1}{\sqrt{\frac{n_o^2+n_e^2}{2n_o^2n_e^2}-r_{41}E_{0j}}}=\frac{\sqrt{2}n_on_e}{\sqrt{n_e^2+n_o^2}}\frac{1}{\sqrt{1-\frac{2n_o^2n_e^2}{n_e^2+n_o^2}r_{41}E_{0j}}}\approx\sqrt{2}\frac{n_on_e}{\sqrt{n_o^2+n_e^2}}+\sqrt{2}\left(\frac{n_o^2n_e^2}{n_o^2+n_e^2}\right)^{3/2}\gamma_{41}E_{0j},
+    \end{gather}
+    故电光延迟为
+    \begin{align}
+        \Delta\varphi=\frac{2\pi l(n_{\parallel}'-n_{\perp}')}{\lambda}\approx\frac{2\pi l}{\lambda}\left[\frac{\sqrt{2}n_on_e}{n_o^2+n_e^2}-n_o+\sqrt{2}\left[\frac{1}{n_o^2}+\frac{1}{n_e^2}\right]^{-3/2}\gamma_{41}\frac{U_y}{d}\right].
+    \end{align}
 \end{pf}
 
 \begin{prob}
