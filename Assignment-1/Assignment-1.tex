@@ -179,7 +179,11 @@
     试证明在非共线相位匹配的条件下, 为获得远红外差频光 ($\omega_1$、$\omega_2\gg\omega_3$), 晶体必须具有反常色散特性.
 \end{prob}
 \begin{pf}
-    
+    为获得远红外差频光, $\omega_1-\omega_2=\omega_3$, $n_1\approx n_2\equiv n$, $n_3\approx n+\Delta n$. 由余弦定理, $\bm{k}_1$ 和 $\bm{k}_2$ 之间的夹角 $\theta$ 满足
+    \begin{align}
+        \cos\theta=\frac{k_1^2+k^2-k_3^2}{2k_1k_2}=\frac{(n_1\omega_1)^2+(n_2\omega_2)^2-(n_3\omega_3)^2}{2n_1\omega_1n_2\omega_2}\approx\frac{n^2(\omega_1^2+\omega_2^2)-(n+\Delta n)^2(\omega_1-\omega_2)^2}{2n^2\omega_1\omega_2}\approx 1-\frac{\Delta n}{n}\frac{(\omega_1-\omega_2)^2}{\omega_1\omega_2}.
+    \end{align}
+    由 $\cos\theta<1$ 得 $\Delta n>0$, 即反常色散.
 \end{pf}
 
 \begin{prob}
