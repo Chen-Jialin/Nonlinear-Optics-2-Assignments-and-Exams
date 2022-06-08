@@ -112,14 +112,39 @@
     试由光波的传播效应证明产生光子回波的 (波矢) 相位匹配条件为 $k_3=2k_1-k_1$.
 \end{prob}
 \begin{pf}
-
+    设探测器相对原子位矢为 $\bm{l}$, 探测到第一、第二个脉冲的起止时刻分别为 $t_1$, $t_1'$, $t_2$, $t_2'$, 光子回波发生于 $t_3$ 时刻.
+    光子回波现象中, 脉冲时间间隔满足
+    \begin{gather}
+        \left(t_3-\frac{\bm{k}_3\cdot\bm{l}}{\omega}\right)-\left(t_2'-\frac{\bm{k}_2\cdot\bm{l}}{\omega}\right)=\left(t_2-\frac{\bm{k}_2\cdot\bm{l}}{\omega}\right)-\left(t_1-\frac{\bm{k}_1\cdot\bm{l}}{\omega}\right)\\
+        \Longrightarrow(\bm{k}_3-2\bm{k}_2+\bm{k}_1)\cdot\bm{l}=\omega(t_3-t_2'-t_2+t_1')=0.
+    \end{gather}
+    由于上式对任意 $\bm{l}$ 均成立, 故
+    \begin{gather}
+        t_3-t_2'=t_2-t_1',\\
+        \bm{k}_3=2\bm{k}_2-\bm{k}_1.
+    \end{gather}
 \end{pf}
 
 \begin{prob}
     一单模阶跃型折射率光纤, (1) 设 $a=5\,\mu$m, $n_2=1.5$, $\lambda=1\,\mu$m, 求次单模光纤可取的最大纤芯折射率; (2) 设 $n_1=1.501$, $n_2=1.5$, $\lambda=1\,\mu$m, 求此单模光纤可取的最大纤芯直径.
 \end{prob}
 \begin{sol}
-    
+    归一化频率
+    \begin{align}
+        f=k_0a(n_1^2-n_2^2)^{1/2}=\frac{2\pi}{\lambda}a(n_1^2-n_2^2)^{1/2}.
+    \end{align}
+    \begin{itemize}
+        \item[(1)] 要使光纤仅支持单模, 则
+        \begin{align}
+            f\leq 2.415,
+        \end{align}
+        即最大线性折射率 $n_1=1.502$.
+        \item[(2)] 要使光纤仅支持单模, 则
+        \begin{align}
+            f\leq 2.415,
+        \end{align}
+        即最大纤芯直径为 $7.016\,\mu$m.
+    \end{itemize}
 \end{sol}
 
 \begin{prob}
@@ -132,6 +157,20 @@
     注: $n_0$ 为不考虑非线性时介质的折射率, $A$ 和 $B$ 均为常数, $A=6\varepsilon_0\chi_{1122}$, $B=6\varepsilon_0\chi_{1221}$.
 \end{prob}
 \begin{pf}
+    各向同性介质仅有 3 个独立的三阶非线性张量元 $\chi_{1122}^{(3)}$, $\chi_{1212}^{(3)}$, $\chi_{1221}^{(3)}$, $\chi_{1111}^{(3)}=\chi_{1122}^{(3)}+\chi_{1212}^{(3)}+\chi_{1221}^{(3)}$, 且对于 $\omega=\omega+\omega-\omega$ 的三阶非线性过程, 由本征对称性, $\chi_{1122}^{(3)}=\chi_{1212}^{(3)}$, 故 $\chi_{1111}^{(3)}=6\chi_{1122}^{(3)}+\chi_{1221}^{(3)}$.
+    折射率变化为 $\delta n=\sqrt{1+\chi_L+\chi_{NL}}-\sqrt{1+\chi_L}=\frac{2\chi_{NL}}{n_0}$.
 
+    先证 (2)(3): 不妨选线偏振方向为 $x$, 则 $\bm{E}=\abs{E}e^{-i(\omega t-kz)}\hat{x}$.
+    该非线性过程的简并因子 $D=\frac{3!}{2!}=3$.
+    极化强度 $P_{NL}^{(3)}=3\varepsilon_0\chi^{(3)}\bm{E}(\omega)\bm{E}(\omega)\bm{E}(-\omega)=3\varepsilon_0\abs{E}^3\chi^{(3)}(\omega,\omega,-\omega)\hat{x}\hat{x}\hat{x}e^{-i(\omega t-kz)}=3\varepsilon_0\abs{E}^3\chi_{1111}^{(3)}e^{-i(\omega t-kz)}\hat{x}=3\varepsilon_0\chi_{1111}^{(3)}\abs{E}^2\bm{E}$, 故 $\chi_{LN}=3\chi_{1111}^{(3)}\abs{E}^2$, $\delta n(linear)=\frac{6\chi_{1122}^{(3)}+3\chi_{1221}^{(3)}}{2n_0}\frac{\varepsilon_0}{\varepsilon_0}\abs{E}^2=\frac{(A+\frac{B}{2})}{2n_0\varepsilon_0}\abs{E}^2$.
+
+    再证 (1), 左/右旋圆偏光为 $\bm{E}=\frac{\abs{E}}{\sqrt{2}}(\hat{x}+\hat{y}e^{\pm\frac{\pi}{2}})e^{-i(\omega t-kz)}$, 琼斯矩阵为 $\bm{E}=\frac{\abs{E}}{\sqrt{2}}\begin{bmatrix}
+        1\\
+        \pm i
+    \end{bmatrix}e^{-i(\omega t-kz)}$, 故 $\bm{E}\bm{E}\bm{E}^*=\frac{1}{2\sqrt{2}}\abs{E}^3e^{-i(\omega t+kz)}(\hat{x}\hat{x}\hat{x}\mp i\hat{x}\hat{x}\hat{y}\pm i\hat{x}\hat{y}\hat{y}+\hat{x}\hat{y}\hat{y}\pm i\hat{y}\hat{x}\hat{x}+\hat{y}\hat{x}\hat{y}-\hat{y}\hat{y}\hat{x}\pm i\hat{y}\hat{y}\hat{y})$.
+    在 $x$ 方向, $P_{NL}^{(3)}=3\varepsilon_0[\chi_{1111}^{(3)}+\chi_{1122}^{(3)}+\chi_{1212}^{(3)}-\chi_{1221}^{(3)}]\frac{1}{2\sqrt{2}}\abs{E}^3e^{-i(\omega t-kz)}=6\varepsilon_0\chi_{1122}^{(3)}\abs{E}^2E_x$;
+    同理在 $y$ 方向, $P_{NL}^{(3)}=\pm 3\varepsilon_0[\chi_{2222}^{(3)}+\chi_{2121}^{(3)}+\chi_{2211}^{(3)}-\chi_{2112}^{(3)}]\frac{1}{2\sqrt{2}}\abs{E}^3e^{-i(\omega t-kz)}=6\varepsilon_0\chi_{1122}^{(3)}\abs{E}^2E_y$.
+    故 $\bm{P}_{NL}^{(3)}=P_{NL,x}^{(3)}\hat{x}+P_{NL,y}^{(3)}\hat{y}=6\varepsilon_0\chi_{1122}^{(3)}\abs{E}^2(E_x\hat{x}+E_y\hat{y})=6\varepsilon_0\chi_{1122}^{(3)}\abs{E}^2\bm{E}$.
+    同理, 非线性极化强度仍正比于入射光, 因此不产生其他偏振分量, 仍为左/右旋圆偏光, $\delta n(circular)=\frac{6\varepsilon_0\varphi_{1122}^{(3)}}{2n_0\varepsilon_0}\abs{E}^2=\frac{A}{2n_0\varepsilon_0}\abs{E}^2$.
 \end{pf}
 \end{document}
